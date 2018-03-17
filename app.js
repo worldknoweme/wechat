@@ -38,7 +38,7 @@ App({
         //         }
         //     }
         // })
-        this.login();
+        // this.login();
         // this.registerUser();
     },
     login : function () {
@@ -66,6 +66,7 @@ App({
             success: function (res) {
                 var userCode = res.code;
                 //获取所有用户信息（此处是以为无法提供获取单个用户的接口，因此只能取出全部之后遍历）
+
                 wx.request({
                     url: 'https://api.bmob.cn/1/users',
                     method:'get',
@@ -102,6 +103,15 @@ App({
                         // that.globalData.uid = res.data.data.uid;
                     }
                 })
+                // wx.request({
+                //     url: 'https://api.it120.cc/'+ that.globalData.subDomain +'/user/wxapp/login',
+                //     data: {
+                //         code: res.code
+                //     },
+                //     success: function(res) {
+                //
+                //     }
+                // })
             }
         })
     },

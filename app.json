@@ -11,12 +11,8 @@
     "pages/address-add/index",
     "pages/order-list/index",
     "pages/order-details/index",
-    "pages/wuliu/index",
-    "pages/mycoupons/index",
     "pages/my/index",
-    "pages/notice/show",
-    "pages/recharge/index",
-    "pages/withdraw/index"
+    "pages/notice/show"
   ],
   "window":{
     "backgroundTextStyle":"light",

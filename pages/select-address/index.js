@@ -43,23 +43,33 @@ Page({
   },
   initShippingAddress: function () {
     var that = this;
-    wx.request({
-      url: 'https://api.it120.cc/'+ app.globalData.subDomain +'/user/shipping-address/list',
-      data: {
-        token:app.globalData.token
-      },
-      success: (res) =>{
-        if (res.data.code == 0) {
-          that.setData({
-            addressList:res.data.data
-          });
-        } else if (res.data.code == 700){
-          that.setData({
-            addressList: null
-          });
-        }
-      }
-    })
+    //不请求报文
+      that.setData({
+          addressList:[{
+              id:0,
+              isDefault:"active",
+              linkMan:'王思聪',
+              mobile:'1868888888',
+              address:'辽宁省大连市万达集团'
+          }]
+      });
+    // wx.request({
+    //   url: 'https://api.it120.cc/'+ app.globalData.subDomain +'/user/shipping-address/list',
+    //   data: {
+    //     token:app.globalData.token
+    //   },
+    //   success: (res) =>{
+    //     if (res.data.code == 0) {
+    //       that.setData({
+    //         addressList:res.data.data
+    //       });
+    //     } else if (res.data.code == 700){
+    //       that.setData({
+    //         addressList: null
+    //       });
+    //     }
+    //   }
+    // })
   }
 
 })
